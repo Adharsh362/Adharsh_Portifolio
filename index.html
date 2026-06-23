@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Adharsh Kaki | Salesforce Marketing Cloud Personalization Developer</title>
+
+<style>
+:root{
+    --primary:#0176d3;
+    --secondary:#16325c;
+    --light:#f4f6f9;
+    --white:#ffffff;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:var(--light);
+    color:#333;
+}
+
+header{
+    background:linear-gradient(135deg,#0176d3,#00a1e0);
+    color:white;
+    text-align:center;
+    padding:80px 20px;
+}
+
+header h1{
+    font-size:3rem;
+    margin-bottom:10px;
+}
+
+header p{
+    font-size:1.2rem;
+}
+
+.container{
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+}
+
+.section{
+    margin:50px 0;
+}
+
+.section-title{
+    color:var(--primary);
+    margin-bottom:25px;
+    position:relative;
+}
+
+.section-title::after{
+    content:'';
+    width:70px;
+    height:4px;
+    background:var(--primary);
+    position:absolute;
+    left:0;
+    bottom:-8px;
+}
+
+.card{
+    background:white;
+    padding:25px;
+    border-radius:12px;
+    box-shadow:0 4px 12px rgba(0,0,0,.08);
+    margin-bottom:20px;
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+}
+
+.skills{
+    display:flex;
+    flex-wrap:wrap;
+    gap:12px;
+}
+
+.skill{
+    background:var(--primary);
+    color:white;
+    padding:10px 15px;
+    border-radius:30px;
+    font-size:14px;
+}
+
+.timeline{
+    border-left:4px solid var(--primary);
+    padding-left:25px;
+}
+
+.timeline-item{
+    margin-bottom:25px;
+}
+
+.timeline-item h3{
+    color:var(--secondary);
+}
+
+.project-list li{
+    margin-bottom:12px;
+}
+
+.contact-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+}
+
+.contact-card{
+    background:white;
+    padding:25px;
+    border-radius:12px;
+    box-shadow:0 4px 12px rgba(0,0,0,.08);
+    text-align:center;
+    transition:.3s;
+}
+
+.contact-card:hover{
+    transform:translateY(-5px);
+}
+
+.contact-card a{
+    text-decoration:none;
+    color:var(--primary);
+    font-weight:600;
+}
+
+.contact-card a:hover{
+    text-decoration:underline;
+}
+
+footer{
+    background:var(--secondary);
+    color:white;
+    text-align:center;
+    padding:20px;
+    margin-top:50px;
+}
+
+.hidden{
+    opacity:0;
+    transform:translateY(20px);
+}
+
+.show{
+    opacity:1;
+    transform:translateY(0);
+    transition:.7s ease;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>Adharsh Kaki</h1>
+    <p>Salesforce Marketing Cloud Personalization Developer</p>
+</header>
+
+<div class="container">
+
+<section class="section hidden">
+    <h2 class="section-title">About Me</h2>
+    <div class="card">
+        Salesforce Marketing Cloud Developer with 5+ years of experience specializing in
+        Salesforce Marketing Cloud Engagement and Personalization. Expertise in AMPscript,
+        SQL, JavaScript, SSJS, Journey Builder, Automation Studio, Einstein Recipes,
+        Personalization Sitemap, Event Tracking and Customer Journey Optimization.
+    </div>
+</section>
+
+<section class="section hidden">
+    <h2 class="section-title">Skills</h2>
+
+    <div class="card">
+        <div class="skills">
+            <span class="skill">SFMC</span>
+            <span class="skill">Personalization</span>
+            <span class="skill">AMPscript</span>
+            <span class="skill">SQL</span>
+            <span class="skill">JavaScript</span>
+            <span class="skill">SSJS</span>
+            <span class="skill">Journey Builder</span>
+            <span class="skill">Automation Studio</span>
+            <span class="skill">Email Studio</span>
+            <span class="skill">Einstein Recipes</span>
+            <span class="skill">Sitemap Configuration</span>
+            <span class="skill">Event Tracking</span>
+            <span class="skill">Audience Segmentation</span>
+        </div>
+    </div>
+</section>
+
+<section class="section hidden">
+    <h2 class="section-title">Experience</h2>
+
+    <div class="card timeline">
+
+        <div class="timeline-item">
+            <h3>Application Development Senior Analyst</h3>
+            <p>Accenture | Jun 2025 - Present</p>
+        </div>
+
+        <div class="timeline-item">
+            <h3>Application Development Analyst</h3>
+            <p>Accenture | Feb 2023 - May 2025</p>
+        </div>
+
+        <div class="timeline-item">
+            <h3>Application Development Associate</h3>
+            <p>Accenture | Feb 2021 - Feb 2023</p>
+        </div>
+
+    </div>
+</section>
+
+<section class="section hidden">
+    <h2 class="section-title">Project Highlights</h2>
+
+    <div class="card">
+        <ul class="project-list">
+            <li>Developed and maintained Personalization Sitemap configurations and JavaScript functions.</li>
+            <li>Implemented Einstein Recipes for AI-driven recommendations and predictive personalization.</li>
+            <li>Configured user attributes, profile objects and catalog data.</li>
+            <li>Implemented event tracking for page views, clicks, purchases and custom interactions.</li>
+            <li>Created dynamic templates based on customer profiles and behavioral data.</li>
+            <li>Developed customer journeys using Journey Builder, Automation Studio and SQL.</li>
+            <li>Designed responsive email templates and reusable content blocks using AMPscript.</li>
+            <li>Built automations to integrate tracking data with Tiny Clues and ODP.</li>
+            <li>Configured Business Units and managed deployments.</li>
+            <li>Developed abandoned cart personalization use cases.</li>
+            <li>Created audience segments using purchase history and customer engagement behavior.</li>
+            <li>Performed Litmus testing, campaign validation and deployment monitoring.</li>
+        </ul>
+    </div>
+</section>
+
+<section class="section hidden">
+    <h2 class="section-title">Certifications</h2>
+
+    <div class="card">
+        <p>✔ Salesforce Certified AI Associate</p>
+        <p>✔ Salesforce Certified AI Specialist</p>
+    </div>
+</section>
+
+<section class="section hidden">
+    <h2 class="section-title">Contact</h2>
+
+    <div class="contact-grid">
+
+        <div class="contact-card">
+            <h3>Email</h3>
+            <a href="mailto:kaki.adharsh362@gmail.com">
+                kaki.adharsh362@gmail.com
+            </a>
+        </div>
+
+        <div class="contact-card">
+            <h3>Phone</h3>
+            <a href="tel:+917036885116">
+                +91 7036885116
+            </a>
+        </div>
+
+        <div class="contact-card">
+            <h3>Location</h3>
+            <a href="https://maps.google.com/?q=Hyderabad,India" target="_blank">
+                Hyderabad, India
+            </a>
+        </div>
+
+        <div class="contact-card">
+            <h3>LinkedIn</h3>
+            <a href="https://www.linkedin.com/in/adharshkaki" target="_blank">
+                View LinkedIn Profile
+            </a>
+        </div>
+
+    </div>
+</section>
+
+</div>
+
+<footer>
+    © 2026 Adharsh Kaki | Salesforce Marketing Cloud Personalization Developer
+</footer>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+
+    const elements = document.querySelectorAll(".hidden");
+
+    const observer = new IntersectionObserver((entries) => {
+
+        entries.forEach(entry => {
+
+            if(entry.isIntersecting){
+                entry.target.classList.add("show");
+            }
+
+        });
+
+    }, {
+        threshold:0.15
+    });
+
+    elements.forEach(element => {
+        observer.observe(element);
+    });
+
+});
+</script>
+
+</body>
+</html>
