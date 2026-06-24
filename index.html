@@ -169,7 +169,7 @@ nav{padding:15px 5%}
 
 <footer>© 2026 Adharsh Kaki</footer>
 
-    <script>
+ <script>
 const sections = document.querySelectorAll("section");
 const navLinks = document.querySelectorAll(".navbar a");
 
@@ -200,6 +200,25 @@ function setActiveLink() {
         }
 
     });
+
+    /* Force Contact highlight when user reaches bottom */
+
+    if (
+        (window.innerHeight + window.scrollY) >=
+        document.body.offsetHeight - 100
+    ) {
+
+        navLinks.forEach(link => {
+            link.classList.remove("active");
+        });
+
+        const contactLink =
+            document.querySelector('a[href="#contact"]');
+
+        if(contactLink){
+            contactLink.classList.add("active");
+        }
+    }
 }
 
 window.addEventListener("scroll", setActiveLink);
