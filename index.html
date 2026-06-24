@@ -25,30 +25,29 @@ h3{font-size:2rem;margin-bottom:20px}
 .contact{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px}
 .contact a{text-decoration:none;color:#0071e3;font-weight:600}
 footer{text-align:center;padding:40px;color:#666}
-    .navbar ul li a{
+    nav a{
     text-decoration:none;
-    color:#333;
-    font-weight:600;
-    padding:8px 12px;
+    color:#1d1d1f;
+    margin-left:20px;
     position:relative;
-    transition:all .3s ease;
+    transition:.3s;
 }
 
-.navbar ul li a.active{
-    color:#0176d3;
+nav a.active{
+    color:#0071e3;
 }
 
-.navbar ul li a.active::after{
+nav a.active::after{
     content:'';
     position:absolute;
     left:0;
-    bottom:-5px;
+    bottom:-8px;
     width:100%;
     height:3px;
-    background:#0176d3;
+    background:#0071e3;
     border-radius:10px;
 }
-@media(max-width:768px){
+    @media(max-width:768px){
 .hero-wrap{flex-direction:column;text-align:center}
 .hero img{width:280px;height:280px}
 nav{padding:15px 5%}
@@ -57,12 +56,13 @@ nav{padding:15px 5%}
 </style>
 </head>
 <body>
-<nav>
+<nav class="navbar">
 <div class="logo">AK</div>
 <div>
 <a href="#about">About</a>
 <a href="#skills">Skills</a>
 <a href="#experience">Experience</a>
+<a href="#highlights">Highlights</a>
 <a href="#contact">Contact</a>
 </div>
 </nav>
@@ -173,16 +173,19 @@ nav{padding:15px 5%}
 const sections = document.querySelectorAll("section");
 const navLinks = document.querySelectorAll(".navbar a");
 
-window.addEventListener("scroll", () => {
+function setActiveLink() {
 
     let current = "";
 
     sections.forEach(section => {
 
         const sectionTop = section.offsetTop - 150;
-        const sectionHeight = section.clientHeight;
+        const sectionHeight = section.offsetHeight;
 
-        if (window.scrollY >= sectionTop) {
+        if (
+            window.pageYOffset >= sectionTop &&
+            window.pageYOffset < sectionTop + sectionHeight
+        ) {
             current = section.getAttribute("id");
         }
 
@@ -192,13 +195,15 @@ window.addEventListener("scroll", () => {
 
         link.classList.remove("active");
 
-        if (link.getAttribute("href") === "#" + current) {
+        if(link.getAttribute("href") === "#" + current){
             link.classList.add("active");
         }
 
     });
+}
 
-});
+window.addEventListener("scroll", setActiveLink);
+window.addEventListener("load", setActiveLink);
 </script>
 </body>
 </html>
